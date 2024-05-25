@@ -46,8 +46,7 @@ src: ./pages/improved-powell-method-example-explanation.md
 ---
 
 ---
-layout: center
-class: text-center
+src: ./pages/end.md
 ---
 
-# Thanks for Listening!
+
