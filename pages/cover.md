@@ -8,9 +8,3 @@ A Derivative-Free Optimization Powerhouse | <a href="https://powell.gxmzuai.top"
     Reporter: Jiakai Gu <br />
     Date: June 19th, 2024 <br />
 </div>
-
-<!-- 
-
-大家好，下面我来分享一下有关监督学习方法的应用方面的个人见解。
-
--->
