@@ -24,11 +24,15 @@ Powell 方法，又称 Powell 共轭方向法，是由 Michael J. D. Powell 提�
 
 在每次迭代中，新的搜索方向会替换掉最成功的搜索方向。迭代过程会持续进行，直到函数值没有显著改进为止。Powell 方法特别适用于计算复杂连续函数的局部最小值，并且不依赖于函数的具体数学表达形式。
 
+![](https://cdn.sa.net/2024/06/02/SLCbx14H35zch8a.webp)
+
 共轭方向的含义：
 
 共轭方向（Conjugate Directions）是指在优化算法中，用于搜索函数极值的特殊方向。这些方向之间具有一种特殊的数学关系，使得在一个方向上搜索不会破坏在之前方向上已经取得的优化效果。在数值优化中，共轭方向可以加速收敛，特别是对于二次函数的最小化问题。
 
 简单来说，共轭方向确保每次搜索都能有效地减少目标函数的值，而不会干扰前几步的成果。
+
+![](https://cdn.sa.net/2024/06/02/qLWvjaiDMEcPkz9.webp)
 
 右侧是powell方法的发明者—剑桥大学的Michael J.D. Powell教授，于2011年在中科院做报告的图片。
 
@@ -37,6 +41,8 @@ Powell 方法，又称 Powell 共轭方向法，是由 Michael J. D. Powell 提�
 接下来介绍powell方法的基本思想和基本计算步骤。
 
 基本思想为：......
+
+![](https://cdn.sa.net/2024/06/02/wImUlsEVtp3unD4.webp)
 
 基本计算步骤，我们可以边做例题边体会该基本计算步骤。
 
@@ -51,6 +57,12 @@ Powell 方法，又称 Powell 共轭方向法，是由 Michael J. D. Powell 提�
 ![](https://cdn.sa.net/2024/05/26/JgGeRImTutX1cYf.webp)
 
 ![](https://cdn.sa.net/2024/05/26/cCA2od618tkiamV.webp)
+
+注意点：
+
+- 在进行一维搜索时，我们希望沿某个方向 (d) 找到使目标函数值最小的点。
+
+- 对于二次函数来说，通过令其导数为 0 可以直接找到极小值点。
 
 附：
 
@@ -81,6 +93,20 @@ b.矩阵运算规范
 
 ![](https://cdn.sa.net/2024/05/23/yQJTjuWMH9EChdD.webp)
 
+![](https://cdn.sa.net/2024/06/02/BUV1Yt2SzX6xfAR.webp)
+
+![](https://cdn.sa.net/2024/06/02/xu4o12vgHWUz3rL.webp)
+
+额外补充：
+
+![](https://cdn.sa.net/2024/06/02/VKkeEIDchMCbn1w.webp)
+
+![](https://cdn.sa.net/2024/06/02/PloAjLxwmCRZFXB.webp)
+
+字母阿尔法是啥含义？
+
+阿尔法是用于表示沿某个方向进行一维搜索时的步长（step size）。具体来说，阿尔法决定了在当前方向上前进的距离。
+
 第一轮迭代结束后，没有停止迭代的原因：
 
 原因小结：
@@ -101,6 +127,8 @@ b.矩阵运算规范
 
 ![](https://cdn.sa.net/2024/05/26/ykMg7dtYfFSmXQz.webp)
 
+![](https://cdn.sa.net/2024/06/02/y2XpA6ZoxeQDfCN.webp)
+
 我们来证明一下该定理。
 
 ![](https://cdn.sa.net/2024/05/26/bt4vABhNaIjH7rZ.webp)
@@ -113,11 +141,25 @@ b.矩阵运算规范
 
 ![](https://cdn.sa.net/2024/05/26/wJOvkQglhcZBxYA.webp)
 
+其余补充：
+
+![](https://cdn.sa.net/2024/06/03/BVx3RODrW8b7fL6.webp)
+
 定理8.2.1有啥用呢？
 
 ![](https://cdn.sa.net/2024/05/26/RdhTVg4oDvNaAHe.webp)
 
 ## PPT8
+
+疑问：新方向d^(k+1)=x^(b)-x^(a)怎么得到的？
+
+详细证明步骤：
+
+![](https://cdn.sa.net/2024/06/05/18LN276gzjebnGy.webp)
+
+总结：
+
+![](https://cdn.sa.net/2024/06/05/eGpS6t4gOmF3jQl.webp)
 
 接下来，我们来学习一下powell方法的二次终止性中的定理8.2.2，我们来证明一下该定理：
 
@@ -143,7 +185,7 @@ b.矩阵运算规范
 
 证明过程：
 
-![](https://cdn.sa.net/2024/05/26/VRDPU4FdwTEJAjM.webp)
+![](https://cdn.sa.net/2024/06/05/iANgEDl8C27ej1P.webp)
 
 ![](https://cdn.sa.net/2024/05/26/ctCz6vKTuQL4nbe.webp)
 
@@ -162,6 +204,12 @@ b.矩阵运算规范
 ![](https://cdn.sa.net/2024/05/26/7AeoJRhztaYZ8cF.webp)
 
 经过这道例题，相信大家对于“在powell方法中，保持n个搜索方向线性无关”的重要性有了进一步的理解。
+
+其余：
+
+![](https://cdn.sa.net/2024/06/05/VRxoQSj49GOnhlp.webp)
+
+![](https://cdn.sa.net/2024/06/05/2NfHiVBEtDTK43M.webp)
 
 ## PPT10
 
@@ -185,7 +233,13 @@ b.矩阵运算规范
 
 ![](https://cdn.sa.net/2024/05/26/TWlVHqu9MJn8mck.webp)
 
-一维搜索步长的定义
+一维搜索步长的定义【有第六章习题6的结论可得】
+
+一维搜索步长的分子可以写成可以写成梯度的转置乘以方向，也可以写成方向的转置乘以梯度。
+
+![](https://cdn.sa.net/2024/06/05/QOzoFYVRKlNe9wu.webp)
+
+解答：
 
 ![](https://cdn.sa.net/2024/05/26/awp47sYMBEHVhoU.webp)
 

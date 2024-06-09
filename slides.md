@@ -52,6 +52,10 @@ src: ./pages/improved-powell-method.md
 ---
 
 ---
+src: ./pages/improved-powell-method-example-explanation.md
+---
+
+---
 src: ./pages/improved-powell-method-example-explanation-answer-1.md
 hideInToc: true
 ---
